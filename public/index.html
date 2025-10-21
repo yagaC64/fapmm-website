@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fundación Amigos Padre Mateo Mateo (FAPMM)</title>
+  <meta name="description" content="Fundación Amigos Padre Mateo Mateo — sitio oficial." />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div style="font-weight:700">FAPMM</div>
+      <nav>
+        <a href="/">Hogar</a>
+        <a href="/sobre-pmm/">Sobre PMM</a>
+        <a href="/sobre-fapmm/">Sobre FAPMM</a>
+        <a href="/obras/">Obras</a>
+        <a href="/contacto/">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Fundación Amigos Padre Mateo Mateo</h1>
+      <p>Preservando y difundiendo la vida y obra del Padre Mateo Mateo.</p>
+      <div style="margin-top:1rem;">
+        <a href="/sobre-fapmm/"><button class="primary">Conocer más</button></a>
+        <a href="#donaciones" style="margin-left:.5rem;"><button class="primary">Donar</button></a>
+      </div>
+    </section>
+
+    <section class="grid grid-3">
+      <article class="card">
+        <h3>Sobre PMM</h3>
+        <p>Biografía y contexto de su legado pastoral y artístico.</p>
+        <p><a href="/sobre-pmm/">Leer más →</a></p>
+      </article>
+      <article class="card">
+        <h3>Sobre la Fundación</h3>
+        <p>Misión, propósito y actividades en apoyo al legado.</p>
+        <p><a href="/sobre-fapmm/">Leer más →</a></p>
+      </article>
+      <article class="card">
+        <h3>Obras</h3>
+        <p>Ensayo y materiales sobre su obra artística.</p>
+        <p><a href="/obras/">Leer más →</a></p>
+      </article>
+    </section>
+
+    <section id="donaciones" class="card" style="margin-top:1rem">
+      <h2>Donaciones</h2>
+      <p>Su aporte apoya la preservación y difusión del legado del Padre Mateo.</p>
+      <!-- PayPal "Donate" classic form. TODO: replace email if needed -->
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="fundacionpadremateomateo@gmail.com" />
+        <input type="hidden" name="item_name" value="Fundación Amigos Padre Mateo Mateo" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <button type="submit" class="primary">Donar con PayPal</button>
+      </form>
+      <p style="font-size:.9rem;color:#475569;margin-top:.5rem;">También puede donar por cheque; contáctenos para detalles.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="y"></span> FAPMM — fundacionpadremateomateo@gmail.com</small>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.DS_Store
+.firebase/
+node_modules/
+.env
+.~lock.*
+*.odt
+firebase-debug.log
+firebase-debug.log

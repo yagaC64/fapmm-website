@@ -1,0 +1,25 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre FAPMM — Fundación Amigos Padre Mateo Mateo</title>
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head><body>
+<header><div class="container"><nav>
+  <a href="/">Hogar</a> · <a href="/sobre-pmm/">Sobre PMM</a> · <a href="/sobre-fapmm/">Sobre FAPMM</a> · <a href="/obras/">Obras</a> · <a href="/contacto/">Contacto</a>
+</nav></div></header>
+<main class="container">
+  <h1>Sobre la Fundación</h1>
+  <p><!-- TODO: misión, propósitos, aviso de actividades --></p>
+  <section class="card">
+    <h2>Donaciones</h2>
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+      <input type="hidden" name="business" value="fundacionpadremateomateo@gmail.com" />
+      <input type="hidden" name="item_name" value="Fundación Amigos Padre Mateo Mateo" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <button type="submit" class="primary">Donar con PayPal</button>
+    </form>
+  </section>
+</main>
+<footer><div class="container"><small>© <span id="y"></span> FAPMM</small></div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script src="/assets/js/main.js"></script>
+</body></html>
