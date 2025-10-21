@@ -2,73 +2,258 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fundación Amigos Padre Mateo Mateo (FAPMM)</title>
-  <meta name="description" content="Fundación Amigos Padre Mateo Mateo — sitio oficial." />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-</head>
-<body>
-  <header>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
-      <div style="font-weight:700">FAPMM</div>
-      <nav>
-        <a href="/">Hogar</a>
-        <a href="/sobre-pmm/">Sobre PMM</a>
-        <a href="/sobre-fapmm/">Sobre FAPMM</a>
-        <a href="/obras/">Obras</a>
-        <a href="/contacto/">Contacto</a>
-      </nav>
-    </div>
-  </header>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Padre Mateo Mateo — FAPMM</title>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Fundación Amigos Padre Mateo Mateo</h1>
-      <p>Preservando y difundiendo la vida y obra del Padre Mateo Mateo.</p>
-      <div style="margin-top:1rem;">
-        <a href="/sobre-fapmm/"><button class="primary">Conocer más</button></a>
-        <a href="#donaciones" style="margin-left:.5rem;"><button class="primary">Donar</button></a>
+  <!-- Bootstrap 4.6 (matches legacy semantics) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1Ibc6JO8UHPv7j5n9XH7rG5x1C3Qf5nLRyZ7P0R6Ukt9K" crossorigin="anonymous">
+
+  <!-- Local styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    /* Transparent navbar that becomes solid after scroll */
+    .navbar-transparency {
+      background: rgba(255,255,255,0.0);
+      transition: background-color .3s ease;
+    }
+    .navbar-transparency.scrolled {
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    }
+    .top-hero {
+      padding-top: 100px; padding-bottom: 100px;
+      background-image: url('/assets/img/hero.webp'); /* TODO: replace with fp1.webp optimized */
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #ffffff;
+    }
+    .fp-feature img { width: 100%; height: auto; display:block; border-radius: .5rem; }
+    .fp-feature p { margin-top: .5rem; font-weight: 600; }
+    footer .bs-icon-circle { display:inline-flex; width:40px; height:40px; border-radius:50%; align-items:center; justify-content:center; background:#0d6efd; color:#fff; }
+    .list-inline a { text-decoration: none; }
+  </style>
+</head>
+
+<body>
+  <!-- Fixed navbar starting with transparency (legacy structure) -->
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top navbar-transparency navchange">
+    <div class="container">
+      <div class="toparea">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/img/logo-wide.webp" width="300" alt="Fundación Amigos Padre Mateo Mateo (logo)">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcol-1" aria-controls="navcol-1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Hogar</a></li>
+          <li class="nav-item"><a class="nav-link" href="/sobre-pmm/">Sobre Padre Mateo Mateo</a></li>
+          <li class="nav-item"><a class="nav-link" href="/sobre-fapmm/">Sobre FAPMM</a></li>
+          <li class="nav-item"><a class="nav-link" href="/obras/">Obras</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main style="min-height:240px;">
+    <!-- Hero section -->
+    <section class="top-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h1 class="h6 visually-hidden">Fundación Amigos Padre Mateo Mateo</h1>
+            <h2 class="display-4 font-weight-bold">Bienvenidos al portal de la Fundación Amigos Padre Mateo Mateo</h2>
+            <p style="max-width: 520px;">
+              Fundación establecida por deseos del Padre Mateo Mateo inscrita el 2 de agosto de 2019 dedicada a la caridad de gran necesidad y a preservar y fomentar el legado del Padre Mateo Mateo tanto escrito, audio visual, pictórico y su apostolado de 49 años.
+            </p>
+            <div class="mt-3">
+              <a class="btn btn-info text-white mr-2" href="/sobre-fapmm/">Conocer más</a>
+            </div>
+          </div>
+          <div class="col-md-4"><!-- empty column to mimic original grid --></div>
+        </div>
       </div>
     </section>
 
-    <section class="grid grid-3">
-      <article class="card">
-        <h3>Sobre PMM</h3>
-        <p>Biografía y contexto de su legado pastoral y artístico.</p>
-        <p><a href="/sobre-pmm/">Leer más →</a></p>
-      </article>
-      <article class="card">
-        <h3>Sobre la Fundación</h3>
-        <p>Misión, propósito y actividades en apoyo al legado.</p>
-        <p><a href="/sobre-fapmm/">Leer más →</a></p>
-      </article>
-      <article class="card">
-        <h3>Obras</h3>
-        <p>Ensayo y materiales sobre su obra artística.</p>
-        <p><a href="/obras/">Leer más →</a></p>
-      </article>
+    <!-- Three feature tiles -->
+    <section class="bg-light py-5">
+      <div class="container py-3">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="fp-feature text-center">
+              <a href="/sobre-pmm/">
+                <img src="/assets/img/pmm300.jpg" alt="Retrato del Padre Mateo Mateo" />
+              </a>
+              <p class="text-center">Sobre Padre Mateo Mateo</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="fp-feature text-center">
+              <a href="/sobre-fapmm/">
+                <img src="/assets/img/fapmm.jpg" alt="Fundación Amigos Padre Mateo Mateo" />
+              </a>
+              <p class="text-center">Sobre FAPMM</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="fp-feature text-center">
+              <a href="/obras/">
+                <img src="/assets/img/obrasfp.jpg" alt="Obras del Padre Mateo Mateo" />
+              </a>
+              <p class="text-center">Obras de Arte</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="donaciones" class="card" style="margin-top:1rem">
-      <h2>Donaciones</h2>
-      <p>Su aporte apoya la preservación y difusión del legado del Padre Mateo.</p>
-      <!-- PayPal "Donate" classic form. TODO: replace email if needed -->
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="business" value="fundacionpadremateomateo@gmail.com" />
-        <input type="hidden" name="item_name" value="Fundación Amigos Padre Mateo Mateo" />
-        <input type="hidden" name="currency_code" value="USD" />
-        <button type="submit" class="primary">Donar con PayPal</button>
-      </form>
-      <p style="font-size:.9rem;color:#475569;margin-top:.5rem;">También puede donar por cheque; contáctenos para detalles.</p>
+    <!-- Biographical split section -->
+    <section class="container my-5" aria-labelledby="bio-title">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="text-center text-md-start d-flex align-items-center justify-content-center justify-content-md-start mb-4">
+            <div style="max-width: 420px;">
+              <h3 id="bio-title" class="text-uppercase font-weight-bold text-secondary">
+                <span class="text-primary">Anastasio Mateo (Padre Mateo Mateo)</span> &nbsp;FRAILE Y PINTOR CARCARÉS
+              </h3>
+              <p class="my-3">
+                ANASTASIO MATEO HERNÁNDEZ (padre Mateo) nació en Cárcar (Navarra) el día 13 de agosto del año 1923.<br><br>
+                En el año 1972 lo envían a Puerto Rico, supuestamente por un período de tres meses, pero su estancia se alargaría hasta el día de hoy.
+              </p>
+              <a class="btn btn-primary btn-lg mr-2" href="/sobre-pmm/" role="button">Conocer más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="px-xl-5 mx-xl-5">
+            <img class="rounded img-fluid w-100" src="/assets/img/fapmm.jpg" alt="Imagen representativa de la Fundación" style="min-height: 300px; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works teaser grid (kept minimal) -->
+    <section class="container d-flex flex-column align-items-center py-4 py-xl-5">
+      <div class="row w-100" style="max-width: 900px;">
+        <div class="col-md-6 order-md-first mb-4">
+          <div class="card">
+            <img class="card-img w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Obra destacada (placeholder)">
+            <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4">
+              <h4 class="font-weight-bold">Obras destacadas</h4>
+              <p>Selección de piezas y ensayo crítico sobre su arte.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-5 d-md-flex order-first justify-content-md-start align-items-md-center order-md-1 mb-4">
+          <div>
+            <h2 class="font-weight-bold text-secondary"><span class="text-primary"><strong>Obras del&nbsp;</strong></span><br>Padre Mateo Mateo</h2>
+            <p>Explora el legado pictórico y los escritos críticos sobre su obra.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 order-md-2 mb-4">
+          <div class="card">
+            <img class="card-img w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Obra destacada (placeholder)">
+            <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4">
+              <h4 class="font-weight-bold">Exposiciones</h4>
+              <p>Próximas y pasadas actividades de la Fundación.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 order-md-2 mb-4">
+          <div class="card">
+            <img class="card-img w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Obra destacada (placeholder)">
+            <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4">
+              <h4 class="font-weight-bold">Archivo</h4>
+              <p>Preservación del material escrito y audiovisual.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donations -->
+    <section class="text-light" style="background:#6ad2d6; padding: 50px 0; margin-top: 50px;">
+      <div class="container text-center">
+        <h2 class="mb-3">Donaciones</h2>
+        <p class="mb-2">Su contribución apoya la preservación y difusión del legado del Padre Mateo.</p>
+        <!-- Simplified PayPal donate form -->
+        <form action="https://www.paypal.com/donate" method="post" target="_blank" aria-label="Formulario de donación">
+          <input type="hidden" name="business" value="fundacionpadremateomateo@gmail.com">
+          <input type="hidden" name="item_name" value="Fundación Amigos Padre Mateo Mateo">
+          <input type="hidden" name="currency_code" value="USD">
+          <div class="donation-amount-group mb-3">
+            <strong class="mr-1">$</strong>
+            <input class="form-control" style="max-width:160px" type="number" name="amount" min="1" step="1" placeholder="Cantidad">
+          </div>
+          <button type="submit" class="btn btn-warning font-weight-bold">Donar con PayPal</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <small>© <span id="y"></span> FAPMM — fundacionpadremateomateo@gmail.com</small>
+  <!-- Footer -->
+  <footer class="text-white bg-primary">
+    <div class="container text-center py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-4 mb-3 mb-lg-0">
+          <p class="my-2 mb-0">Copyright © <span id="y"></span><br>
+            Fundación Amigos Padre Mateo Mateo</p>
+        </div>
+        <div class="col-lg-4 mb-3 mb-lg-0">
+          <ul class="list-inline my-2 mb-0">
+            <li class="list-inline-item">
+              <div class="bs-icon-circle">
+                <a class="text-white" href="https://www.facebook.com/FundacionAmigosPadreMateoMateo" aria-label="Facebook de la Fundación">
+                  <!-- Bootstrap icon: facebook -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                  </svg>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <ul class="list-inline my-2 mb-0">
+            <li class="list-inline-item"><a class="text-white-50" href="/sobre-pmm/">Padre Mateo Mateo</a></li>
+            <li class="list-inline-item"><a class="text-white-50" href="/sobre-fapmm/">FAPMM</a></li>
+            <li class="list-inline-item"><a class="text-white-50" href="/obras/">Obras</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script>
+    // year in footer
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('y').textContent = new Date().getFullYear();
+      const nav = document.querySelector('.navbar-transparency');
+      const onScroll = () => {
+        if (window.scrollY > 20) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll);
+    });
+  </script>
+
+  <!-- jQuery + Bootstrap 4.6 JS (legacy-compatible navbar behavior) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   <script src="/assets/js/main.js"></script>
 </body>
 </html>

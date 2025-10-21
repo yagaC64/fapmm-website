@@ -1,14 +1,43 @@
 /* Minimal, readable defaults */
 :root{--brand:#1b3b8b;}
 html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;margin:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;margin:0;background:#fff;}
 header,footer{background:#0f172a;color:#fff}
 a{color:var(--brand);text-decoration:none}
-nav a{color:#fff;margin:0 0.75rem}
-.container{max-width:960px;margin:0 auto;padding:1.25rem}
-.hero{padding:3rem 0}
-.grid{display:grid;gap:1rem}
-@media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1rem}
-button.primary{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:.75rem 1rem;cursor:pointer}
+/* remove global nav coloring; scope to header navbar only */
+.navbar-nav .nav-link{padding-left:.75rem;padding-right:.75rem}
+.navbar-transparency{
+  background:transparent;
+  position:relative;
+  z-index:1000;
+  transition:background-color .25s ease,box-shadow .25s ease;
+}
+.navbar-nav{padding-left:0;margin-bottom:0;list-style:none}
+/* readable on top of hero: subtle dark-to-clear gradient */
+.navbar-transparency:not(.scrolled){
+  background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,0));
+}
+.toparea{display:flex;align-items:center;width:100%}
+.toparea .navbar-toggler{margin-left:auto}
+.navbar-transparency .nav-link{color:#ffffff !important;font-weight:500}
+.navbar-transparency .nav-link:hover{opacity:.85}
+.navbar-transparency.scrolled{
+  background:rgba(255,255,255,.98) !important;
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+.navbar-transparency.scrolled .nav-link{color:#212529 !important}
+.navbar-brand img{display:block;height:auto}
+.navbar-toggler{border-color:rgba(0,0,0,.1)}
+.navbar-light .navbar-toggler-icon{
+  background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0,0,0,0.55)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+.navbar-transparency.scrolled .navbar-toggler{border-color:rgba(0,0,0,.15)}
+/* horizontal menu on large screens */
+@media (min-width:992px){
+  .navbar-nav{flex-direction:row;align-items:center}
+  .navbar-nav .nav-item{padding-left:.5rem;padding-right:.5rem}
+}
+.donation-amount-group{display:flex;justify-content:center;align-items:center}
+.donation-amount-group>*{margin-right:.5rem}
+.donation-amount-group>*:last-child{margin-right:0}
 img{max-width:100%;height:auto}
