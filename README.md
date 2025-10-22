@@ -118,7 +118,31 @@ firebase deploy --only hosting
 
 ---
 
+## ♻️ Recuperar la versión oficial desde GitHub
+
+Si en algún momento tu carpeta local queda con cambios accidentales, puedes volver exactamente al estado publicado en GitHub (esto elimina cambios locales, haz copia de lo que quieras conservar):
+
+```bash
+cd /ruta/al/clon/fapmm-website
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+```
+
+- `git fetch origin` trae la última versión remota.
+- `git reset --hard origin/main` deja la rama `main` idéntica a GitHub.
+- `git clean -fd` borra archivos o carpetas no rastreados.
+
+¿Prefieres empezar desde cero? Clona de nuevo:
+
+```bash
+git clone https://github.com/yagaC64/fapmm-website.git
+```
+
+Con eso tendrás la misma versión que María deploya desde GitHub.
+
+---
+
 ### 🙏 Gracias
 
 This effort preserves the cultural and spiritual legacy of Padre Mateo Mateo through technology and collaboration.
-
